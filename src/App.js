@@ -31,7 +31,8 @@ const App = () => {
                         })
                     );
                 });
-            } else dispatch(setCurrentUser(userAuth));
+            }
+            dispatch(setCurrentUser(userAuth));
         });
 
         return () => unsubscribeFromAuth();
