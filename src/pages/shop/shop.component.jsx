@@ -17,7 +17,7 @@ const ShopPage = ({ match }) => {
             dispatch(updateCollections(collectionsMap));
         });
         return () => unsubscribeFromSnapshot();
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="shop-page">

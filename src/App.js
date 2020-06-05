@@ -36,7 +36,7 @@ const App = () => {
         });
 
         return () => unsubscribeFromAuth();
-    }, []);
+    }, [dispatch]);
 
     return (
         <div>
