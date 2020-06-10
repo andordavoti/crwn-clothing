@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 
-import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import CheckoutPage from './pages/checkout/checkout.component';
@@ -13,6 +12,7 @@ import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { useSelector, useDispatch } from 'react-redux';
+import { GlobalStyle } from './global.styles';
 
 const App = () => {
     const currentUser = useSelector(selectCurrentUser);
@@ -40,6 +40,7 @@ const App = () => {
 
     return (
         <div>
+            <GlobalStyle />
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />
