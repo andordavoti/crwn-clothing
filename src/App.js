@@ -51,12 +51,12 @@ const App = () => {
                         <Route exact path="/" component={HomePage} />
                         <Route path="/shop" component={ShopPage} />
                         <Route exact path="/checkout" component={CheckoutPage} />
+                        <Route
+                            exact
+                            path="/signin"
+                            render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUp />)}
+                        />
                     </Suspense>
-                    <Route
-                        exact
-                        path="/signin"
-                        render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUp />)}
-                    />
                 </Switch>
             </ErrorBoundary>
         </div>
